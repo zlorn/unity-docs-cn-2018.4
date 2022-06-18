@@ -1,0 +1,260 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="图形命令缓冲区 - Unity 手册">
+<title>图形命令缓冲区 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/SL/CameraRenderFlowCmdBuffers.png">
+<meta name="description" content="命令缓冲区可用于扩展 Unity 的内置渲染管线。命令缓冲区包含一系列渲染命令，这些命令在摄像机渲染期间的各个点执行。要在 Unity 的内置渲染管线中指定要执行命令缓冲区的位置，请使用 CameraEvent 枚举。">
+<meta property="og:description" content="命令缓冲区可用于扩展 Unity 的内置渲染管线。命令缓冲区包含一系列渲染命令，这些命令在摄像机渲染期间的各个点执行。要在 Unity 的内置渲染管线中指定要执行命令缓冲区的位置，请使用 CameraEvent 枚举。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'GraphicsCommandBuffers';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/GraphicsCommandBuffers.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/GraphicsCommandBuffers.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/GraphicsCommandBuffers.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/GraphicsCommandBuffers.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/GraphicsCommandBuffers.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/GraphicsCommandBuffers.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/GraphicsCommandBuffers.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/GraphicsCommandBuffers.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/GraphicsCommandBuffers.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/GraphicsCommandBuffers.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/GraphicsCommandBuffers.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/GraphicsCommandBuffers.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/GraphicsCommandBuffers.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/GraphicsCommandBuffers.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/GraphicsCommandBuffers.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/GraphicsCommandBuffers.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/GraphicsCommandBuffers.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/GraphicsCommandBuffers.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/GraphicsCommandBuffers.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/GraphicsCommandBuffers.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/GraphicsCommandBuffers.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/GraphicsCommandBuffers.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/GraphicsCommandBuffers.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/GraphicsCommandBuffers.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/GraphicsCommandBuffers.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/GraphicsCommandBuffers.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/GraphicsCommandBuffers.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/GraphicsCommandBuffers.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/GraphicsCommandBuffers.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/GraphicsCommandBuffers.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/GraphicsCommandBuffers.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/GraphicsCommandBuffers.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/GraphicsCommandBuffers.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/GraphicsCommandBuffers.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/GraphicsCommandBuffers.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/GraphicsCommandBuffers.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/GraphicsCommandBuffers.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/GraphicsCommandBuffers.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/GraphicsCommandBuffers.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/GraphicsCommandBuffers.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/GraphicsCommandBuffers.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/GraphicsCommandBuffers.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/GraphicsCommandBuffers.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/GraphicsCommandBuffers.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/GraphicsCommandBuffers.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/GraphicsCommandBuffers.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/GraphicsCommandBuffers.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/GraphicsCommandBuffers.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/GraphicsCommandBuffers.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/GraphicsCommandBuffers.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/GraphicsCommandBuffers.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/GraphicsCommandBuffers.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/GraphicsCommandBuffers.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/GraphicsCommandBuffers.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li>高级渲染功能</li>
+<li>图形命令缓冲区</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-ComputeShader.html"></a></span><div class="tip">计算着色器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GPUInstancing.html"></a></span><div class="tip">GPU 实例化</div>
+</div>
+</div></div>
+<h1>图形命令缓冲区</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="../ScriptReference/Rendering.CommandBuffer.html">命令缓冲区</a>可用于扩展 Unity 的内置<a href="SL-RenderPipeline.html">渲染管线</a>。命令缓冲区包含一系列渲染命令，这些命令在摄像机渲染期间的各个点执行。要在 Unity 的内置渲染管线中指定要执行命令缓冲区的位置，请使用 <a href="../ScriptReference/Rendering.CameraEvent.html">CameraEvent 枚举</a>。</p>
+
+<p>例如，可以将命令缓冲区与 <a href="../ScriptReference/Rendering.CameraEvent.AfterGBuffer.html">AfterGBuffer</a> CameraEvent 结合使用，从而将其他游戏对象渲染到<a href="RenderTech-DeferredShading.html">延迟管线</a>中（在管线处理所有不透明的游戏对象之后）。</p>
+
+<p>下面是摄像机如何使用前向或延迟管线在 Unity 中渲染场景的高度概括性描述。</p>
+
+<ul>
+<li>黑框表示内部 Unity 流程。</li>
+<li>蓝框表示 CameraEvent，您可以在其中添加命令缓冲区。
+<img src="../uploads/SL/CameraRenderFlowCmdBuffers.png" alt="">
+</li>
+</ul>
+
+<p>有关更多信息，请参阅 CommandBuffer 类和 CameraEvent 枚举。
+还可以将命令缓冲区与<a href="PostProcessingWritingEffects">图像效果</a>结合使用或用于替代图像效果。</p>
+
+<h2>示例代码</h2>
+
+<p>这是一个示例 Unity 项目，演示了可以使用以下命令缓冲区创建的一些效果：
+<a href="../uploads/Examples/RenderingCommandBuffers.zip">RenderingCommandBuffers.zip</a>。</p>
+
+<h3>模糊折射</h3>
+
+<p>此场景演示了一种可用于创建模糊折射的技术。
+<img src="../uploads/Main/RenderingCommandBufferBlurryRefraction.jpg" alt="">
+Unity 渲染不透明对象和天空盒后，此技术将当前图像复制到临时渲染目标并使其变模糊。然后，玻璃着色器对此模糊图像进行采样，并使用法线贴图来偏移 UV 坐标以模拟折射。
+此技术类似于<a href="SL-GrabPass.html">着色器 GrabPass</a>。</p>
+
+<h3>延迟管线中的自定义面光源</h3>
+
+<p>此场景显示了一种可用于创建自定义延迟球形和管形光源的技术。
+<img src="../uploads/Main/RenderingCommandBufferCustomLights.jpg" alt="">
+Unity 处理常规延迟光源通道后，此技术为每个自定义光源绘制一个球体。然后，每个球体使用着色器来计算光照并将其添加到光照缓冲区。</p>
+
+<h3>延迟管线中的贴花</h3>
+
+<p>此场景显示了处理延迟贴花的基本技术。
+<img src="../uploads/Main/RenderingCommandBufferDecals.jpg" alt="">
+Unity 处理 G 缓冲区后，此技术绘制每个贴花并修改 G 缓冲区内容。此技术的工作方式与 Unity 在延迟管线中处理光源的方式类似，但此技术会修改 G 缓冲区纹理而不是累积光照。
+<img src="../uploads/Main/RenderingCommandBufferDecalsScene.jpg" alt="">
+此技术将每个贴花作为一个盒体处理，并且仅影响盒体体积内的几何体。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-ComputeShader.html"></a></span><div class="tip">计算着色器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GPUInstancing.html"></a></span><div class="tip">GPU 实例化</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Look Dev 视图 - Unity 手册">
+<title>Look Dev 视图 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/LookDevControlPanel.png">
+<meta name="description" content="Look Dev 视图是主窗口。可以一次打开多个 Look Dev 视图。">
+<meta property="og:description" content="Look Dev 视图是主窗口。可以一次打开多个 Look Dev 视图。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'LookDevView';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/LookDevView.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/LookDevView.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/LookDevView.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/LookDevView.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/LookDevView.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/LookDevView.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/LookDevView.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/LookDevView.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/LookDevView.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/LookDevView.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/LookDevView.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LookDevView.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LookDevView.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LookDevView.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LookDevView.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LookDevView.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LookDevView.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LookDevView.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LookDevView.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LookDevView.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LookDevView.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LookDevView.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LookDevView.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LookDevView.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LookDevView.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LookDevView.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LookDevView.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LookDevView.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LookDevView.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/LookDevView.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LookDevView.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LookDevView.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LookDevView.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/LookDevView.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/LookDevView.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/LookDevView.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/LookDevView.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LookDevView.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LookDevView.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LookDevView.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LookDevView.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LookDevView.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LookDevView.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LookDevView.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LookDevView.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LookDevView.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LookDevView.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LookDevView.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LookDevView.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LookDevView.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LookDevView.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LookDevView.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LookDevView.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LookDevView.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="Experimental.html">实验性</a></li>
+<li><a href="LookDev.html">Look Dev</a></li>
+<li>Look Dev 视图</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LookDevOverview.html"></a></span><div class="tip">概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LookDevControlPanel.html"></a></span><div class="tip">Control panel</div>
+</div>
+</div></div>
+<h1>Look Dev 视图</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Look Dev 视图是主窗口。可以一次打开多个 Look Dev 视图。</p>
+
+<p>默认情况下，Look Dev 视图中只有一个视图，但可以从一系列分屏视图中进行选择。请参阅下方的<a href="#MultiView">多视图 (Multi-view)</a> 以了解与此相关的更多信息。</p>
+
+<h2>将预制件加载到 Look Dev 视图中</h2>
+
+<p>Look Dev 视图主要用于查看资源预制件。</p>
+
+<p>要将预制件加载到 Look Dev 视图中，请右键单击该预制件，然后选择 <strong>Open in Look Dev Tool</strong>。或者，如果 Look Dev 已经打开，请将预制件从 Hierarchy 窗口直接拖放到 Look Dev 视图中。</p>
+
+<p><strong>注意：</strong>右键单击预制件将其加载到 Look Dev 时，它会自动加载到当前可见的 Look Dev 视图或最后一个活动视图中。</p>
+
+<p><a name="MultiView"></a> </p>
+
+<h2>多视图</h2>
+
+<p>默认情况下，Look Dev 视图显示单个面板，包含正在处理的预制件。使用<a href="LookDevControlPanel.html">控制面板（Control Panel）</a>中的按钮在其旁边显示一个分屏复制面板，可以比较和对比不同的设置。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevControlPanel.png" alt="控制面板（Control panel）">
+<figcaption>控制面板（Control panel）</figcaption>
+</figure>
+
+<p>选择包含数字 <strong>1</strong> 或 <strong>2</strong> 的按钮时，Look Dev 视图处于单面板模式。每个按钮对应于 Look Dev 中的相应视图。选择按钮 <strong>1</strong> 可将设置应用于视图 1，而选择按钮 <strong>2</strong> 可将设置应用于视图 2。</p>
+
+<p>__Side-by-side__：<img src="../uploads/Main/LookDevView-SideBySideButton.png" alt=""></p>
+
+<p>并排显示的重复视图。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevView-SideBySide.jpg" alt="Side-by-side 视图">
+<figcaption><strong>Side-by-side</strong> 视图</figcaption>
+</figure>
+
+<p>默认情况下，两个视图使用相同的摄像机。中间的锁定按钮 <img src="../uploads/Main/LookDevView-LockButton.png" alt=""> 可解除这种行为，允许您独立操作两个视图中的摄像机。</p>
+
+<p>__Split-screen__：<img src="../uploads/Main/LookDevView-SplitScreenButton.png" alt=""></p>
+
+<p>将视图水平拆分为两个，橙色/蓝色操作辅助图标表示两个视图之间的分离平面（请参阅下面的<a href="#UsingGizmo">使用操作辅助图标</a>获取有关使用此辅助图标的指导）。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevView-Gizmo.png" alt="Split-screen 视图">
+<figcaption><strong>Split-screen</strong> 视图</figcaption>
+</figure>
+
+<p>__Zone__：<img src="../uploads/Main/LookDevView-ZoneButton.png" alt=""></p>
+
+<p>此视图拆分为两个，通过橙色/蓝色操作辅助图标的位置来定义圆形拆分结果：</p>
+
+<figure>
+<img src="../uploads/Main/LookDevView-Zone.png" alt="Zone 视图">
+<figcaption><strong>Zone</strong> 视图</figcaption>
+</figure>
+
+<p>要将不同的预制件加载到每个分屏视图中，请选择 <strong>Settings</strong> 并启用 __Allow Different Objects__，然后将每个预制件拖放到其目标视图中。</p>
+
+<p>请注意，在多视图模式下，只有在需要查看同一资源的两个不同版本时，这样做才有意义。比较完全不同的资源无助于了解光照或视觉效果的差异。</p>
+
+<p><a name="UsingGizmo"></a> </p>
+
+<h2>使用操作辅助图标</h2>
+
+<p>操作辅助图标在 Split-screen 和 Zone 模式下具有不同的行为，但在这两种模式下的使用方式是相同的。</p>
+
+<h3>移动分隔条</h3>
+
+<p>要移动分隔条，请单击辅助图标较短的部分，然后将其拖放到所需的位置。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevView-GizmoBefore.png" alt="通过单击和拖放操作移动分隔平面">
+<figcaption>通过单击和拖放操作移动分隔平面</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LookDevView-GizmoAfter.png" alt="分隔平面拖到右侧">
+<figcaption>分隔平面拖到右侧</figcaption>
+</figure>
+
+<h3>改变方向和长度</h3>
+
+<p>要更改操作辅助图标的方向和长度，请单击并拖动操作辅助图标任一端的圆形。</p>
+
+<p>在 Zone 模式下，移动操作辅助图标上的圆圈会改变视图圆圈的半径。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevView-GizmoZoneBefore.png" alt="如何移动操作辅助图标上的圆圈">
+<figcaption>如何移动操作辅助图标上的圆圈</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LookDevView-GizmoZoneAfter.png" alt="移动辅助图标的圆圈已将视图圆圈的半径增大">
+<figcaption>移动辅助图标的圆圈已将视图圆圈的半径增大</figcaption>
+</figure>
+
+<h3>以递增方式改变分隔</h3>
+
+<p>要以递增方式改变分隔，请单击并按住操作辅助图标尾端的圆圈，然后在按住 <strong>Shift</strong> 的同时移动鼠标。这样会将操作辅助图标对齐到设定角度，这对于设置完美的水平、垂直或对角线角度非常有用。</p>
+
+<p>分隔条上的中央白色圆圈可用于在两个视图之间进行混合。左键单击它并沿着橙色线拖动它即可将左侧视图与右侧视图混合（如下面的图 A 所示）。拖动到蓝色线可将右侧视图与左侧视图混合（如下面的图 B 所示）。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevView-GizmoIncrementBefore.png" alt="图 A">
+<figcaption>图 A</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LookDevView-GizmoIncrementAfter.png" alt="图 B">
+<figcaption>图 B</figcaption>
+</figure>
+
+<p>往回拖动白色圆圈时，白色圆圈会自动弹回到中心位置。这有助于快速恢复到默认的混合值。</p>
+
+<h2>每个选项的用途</h2>
+
+<ul>
+<li><p>__Side-by-side__：比较同一资源上的两个不同光照条件，检查其行为是否正确。</p></li>
+<li><p>__Split-screen/Zone__：使用调试着色器模式调查纹理问题（例如，使用一个视图查看正常着色或反照率着色，而在另一个视图中查看环境光照模式）。</p></li>
+<li><p>__Side-by-side/Split-screen/Zone__：使用相同的光照条件比较同一资源的两个不同版本，了解哪些更改可提高资源的质量。</p></li>
+<li><p>__Side-by-side/Split-screen/Zone__：使用相同的光照条件比较两个不同的<a href="LevelOfDetail.html">资源 LOD</a>，从而测试 LOD 的质量。</p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LookDevOverview.html"></a></span><div class="tip">概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LookDevControlPanel.html"></a></span><div class="tip">Control panel</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

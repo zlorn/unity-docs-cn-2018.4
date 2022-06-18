@@ -1,0 +1,452 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="空间映射渲染器 (Spatial Mapping Renderer) - Unity 手册">
+<title>空间映射渲染器 (Spatial Mapping Renderer) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/spatial_mapping_renderer.png">
+<meta name="description" content="__空间映射渲染器__组件提供空间映射表面的可视化表示。这对于通过可视化方式调试表面并向环境添加视觉效果非常有用。">
+<meta property="og:description" content="__空间映射渲染器__组件提供空间映射表面的可视化表示。这对于通过可视化方式调试表面并向环境添加视觉效果非常有用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'SpatialMappingRenderer';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/SpatialMappingRenderer.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/SpatialMappingRenderer.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/SpatialMappingRenderer.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/SpatialMappingRenderer.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/SpatialMappingRenderer.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/SpatialMappingRenderer.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/SpatialMappingRenderer.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/SpatialMappingRenderer.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/SpatialMappingRenderer.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/SpatialMappingRenderer.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/SpatialMappingRenderer.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/SpatialMappingRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/SpatialMappingRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/SpatialMappingRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SpatialMappingRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/SpatialMappingRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SpatialMappingRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SpatialMappingRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SpatialMappingRenderer.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SpatialMappingRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SpatialMappingRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SpatialMappingRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SpatialMappingRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SpatialMappingRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SpatialMappingRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SpatialMappingRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SpatialMappingRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/SpatialMappingRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/SpatialMappingRenderer.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/SpatialMappingRenderer.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/SpatialMappingRenderer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/SpatialMappingRenderer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/SpatialMappingRenderer.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/SpatialMappingRenderer.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/SpatialMappingRenderer.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/SpatialMappingRenderer.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/SpatialMappingRenderer.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/SpatialMappingRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/SpatialMappingRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/SpatialMappingRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SpatialMappingRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/SpatialMappingRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SpatialMappingRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SpatialMappingRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SpatialMappingRenderer.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SpatialMappingRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SpatialMappingRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SpatialMappingRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SpatialMappingRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SpatialMappingRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SpatialMappingRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SpatialMappingRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SpatialMappingRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/SpatialMappingRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="wmr_sdk_overview.html">Windows Mixed Reality</a></li>
+<li><a href="SpatialMapping.html">HoloLens 空间映射</a></li>
+<li><a href="SpatialMappingComponents.html">空间映射 (Spatial Mapping) 组件</a></li>
+<li>空间映射渲染器 (Spatial Mapping Renderer)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingCollider.html"></a></span><div class="tip">空间映射碰撞体 (Spatial Mapping Collider)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingLowLevelApi.html"></a></span><div class="tip">空间映射低级 API</div>
+</div>
+</div></div>
+<h1>空间映射渲染器 (Spatial Mapping Renderer)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__空间映射渲染器__组件提供空间映射表面的可视化表示。这对于通过可视化方式调试表面并向环境添加视觉效果非常有用。</p>
+
+<p>系统定期向__空间映射渲染器__组件发送有关物理空间变化的数据。每次由空间映射系统向该组件通知这些变化时，该组件都会将返回的表面数据烘焙到包含<a href="class-MeshFilter.html">网格过滤器 (Mesh Filter)</a> 和<a href="class-MeshRenderer.html">网格渲染器 (Mesh Renderer)</a> 组件的游戏对象中。空间映射渲染器组件会管理这些表面游戏对象的生命周期。也就是说，该组件负责在场景中创建、更新和销毁表面游戏对象网格渲染器。</p>
+
+<figure>
+<img src="../uploads/Main/spatial_mapping_renderer.png" alt="Unity Editor 中显示的空间映射渲染器 (Spatial Mapping Renderer) 组件">
+<figcaption>Unity Editor 中显示的空间映射渲染器 (Spatial Mapping Renderer) 组件</figcaption>
+</figure>
+
+<h2>Render Settings</h2>
+
+<p>下表列出了__空间映射渲染器__组件可用的所有唯一渲染设置 (Render Settings)。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Render State</strong></td>
+	<td style="text-align:left;">所有表面游戏对象都从 <strong>Render State</strong> 设置中获取材质。更改 <strong>Render State</strong> 设置（例如，在运行时通过脚本进行更改）时，所有表面游戏对象的渲染材质都将更改为所选 <strong>Render State</strong> 设置的材质。这样可减少绘制调用次数，进而提高渲染性能。使用共享材质还可以减少应用程序在渲染期间使用的内存量。请从三个选项之中选择一项来渲染表面。<br><br>请参阅下面的 <a href="#RenderState">Render State</a> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Occlusion</strong></td>
+	<td style="text-align:left;">应用 <strong>Occlusion Material</strong> 中定义的材质。这是一种透明材质，可将游戏对象隐藏在真实世界表面的背后。请参阅下面的 <a href="#VisualOcclusionMaterials">Visual Material 和 Occlusion Material</a> 以了解更多信息。<br><br><strong>注意：__此设置将启用表面的所有网格渲染器，并覆盖所有其他设置。|
+| |</strong>Visualisation<strong>| 应用 </strong>Visualization Material__ 中定义的材质来可视化环境中的空间映射表面（通常是线框材质）。请参阅下面的 <a href="#VisualOcclusionMaterials">Visual Material 和 Occlusion Material</a> 以了解更多信息。<br><br><strong>注意__：此设置将启用表面的所有网格渲染器，并覆盖所有其他设置。 |
+| |</strong>None<strong>| 选择此选项可禁用分配给空间映射表面的所有网格渲染器。|
+|</strong>Occlusion Material<strong>||此处选择的材质是空间映射渲染器的 </strong>Render State__ 设置为 <strong>Occlusion</strong> 时应用的材质。默认设置为内置的 <strong>SpatialMappingOcclusion</strong> 材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Visual Material</strong></td>
+	<td style="text-align:left;">此处选择的材质是空间映射渲染器的 <strong>Render State</strong> 设置为 <strong>Visualization</strong> 时应用的可视材质 (Visual Material)。默认设置为内置的 <strong>SpatialMappingWireframe</strong> 材质。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>General Settings</h2>
+
+<h1>SpatialMapping 组件常规设置</h1>
+
+<p>以下是__空间映射渲染器 (Spatial Mapping Renderer)__ 和__空间映射碰撞体 (Spatial Mapping Collider)__ 组件的共同设置。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Surface Parent</strong></td>
+	<td style="text-align:left;">选择希望由空间映射组件生成的表面游戏对象继承自的__表面父级 (Surface Parent)__ 游戏对象。将此设置保留为 <strong>None(Game Object)</strong> 可自动生成表面父游戏对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Freeze Updates</strong></td>
+	<td style="text-align:left;">选中此复选框可停止组件向系统查询表面更改。<br><br><strong>注意：__每个空间映射组件会定期在空间映射数据中查询物理空间中的表面更改。查询和烘焙表面的过程存在内存、性能和功耗方面的成本。对于希望基本为静态的环境，建议让用户在一段时间内观察环境而不更新表面游戏对象。<br><br>如果希望模拟中的环境在很大程度上为静态且不变（如棋盘游戏），可以在应用程序启动时预先扫描所需的表面数据，然后将 </strong>Freeze Updates__ 属性设置为 <strong>true</strong> 以防止进一步更新。这样可以略微提高性能并降低功耗。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Time Between Updates</strong></td>
+	<td style="text-align:left;">指定对物理空间中的表面更改进行查询的间隔时间（以小数格式的秒为单位，如 3.7 或 4.6）。默认值为 2.5 秒。请注意，查询越频繁，内存、性能和功耗的成本就越高。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Removal Update Count</strong></td>
+	<td style="text-align:left;">在系统删除表面游戏对象之前的更新次数。在此上下文中，可将一次更新视为一帧。默认为 10 次更新。<br><br><strong>注意：__当空间映射通知组件表面游戏对象不再位于 SurfaceObserver 的包围体中时（即不再位于系统报告的规定区域中时），将开始进行删除更新倒计时。此设置允许您指定此事件之后在空间映射删除表面游戏对象之前应执行的更新次数。 |
+| </strong>Level of Detail<strong>| 组件生成的网格质量（__Low</strong>、<strong>Medium</strong> 或 <strong>High__）。默认质量为 </strong>Medium<strong>。质量越高，生成的碰撞体或渲染网格越精细和准确。使用较低质量的设置可以在性能和功耗方面降低成本。请参阅此表下的图了解三个 </strong>Level Of Detail__ 模式的示例。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounding Volume Type</strong></td>
+	<td style="text-align:left;">组件的包围体区域形状，应用程序在其中接收空间映射数据。此设置可以是 <strong>Sphere</strong> 或 <strong>Axis Aligned Box</strong>。默认为 <strong>Axis Aligned Box</strong>。<br><br><strong>注意：__包围体是系统报告物理表面更改并限制空间映射网格范围的规定区域。|
+| </strong>Size In Meters<strong>| 组件使用的包围体的大小（以米为单位）。按半径配置 </strong>Sphere__；默认半径为 2 米。按面积配置 <strong>Axis Aligned Box__；默认值为 Vector3 (4,4,4)。<br><br></strong>注意：__观察者的包围体是供空间映射报告物理表面更改的规定区域。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>细节级别 (Level of Detail)</h2>
+
+<p>两个空间映射组件都允许为每个组件生成的空间网格指定三个细节级别之一（Low、Medium 或 High），如下图所示。</p>
+
+<figure>
+<img src="../uploads/Main/spatialmapping_lod.jpg" alt="空间映射网格的三个细节级别模式">
+<figcaption>空间映射网格的三个细节级别模式</figcaption>
+</figure>
+
+<p>如果可能，请将 <strong>Spatial Mapping Colliders</strong> 的 Level of Detail 设置为 Low。这样将在计算碰撞交点时提高性能并降低功耗。但是，将 <strong>Level of Detail</strong> 设置为 <strong>Low</strong> 可能会对应用程序的视觉效果产生负面影响。</p>
+
+<h2>使用空间映射渲染器</h2>
+
+<p><a name="RenderState"></a> </p>
+
+<h3>Render State</h3>
+
+<p>此组件提供了一种动态更改所有生成的表面上的材质的简便方法。Unity 提供了两种预先构建的材质类型供您使用：</p>
+
+<p><strong>Occlusion Material</strong></p>
+
+<p>此材质使游戏对象看起来透明，但通过游戏对象看不到全息图。例如，如果需要一个真实的桌子来隐藏位于其下方的游戏内全息对象，这可能会很有用。</p>
+
+<p><strong>Visual Material</strong></p>
+
+<p>这是 Unity 应用于空间映射渲染器组件中所有表面的线框材质。使用默认的线框着色器时，线框的颜色代表真实世界的距离。这通常是进行调试时最有用的选项，但也可以将其用于呈现视觉效果。该着色器使用颜色映射来指示距离；下表显示了这种颜色映射：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>与 HoloLens 的距离</strong></th>
+	<th style="text-align:left;"><strong>Color</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">0 到 1 米</td>
+	<td style="text-align:left;">黑色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">1 到 2 米</td>
+	<td style="text-align:left;">红色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2 到 3 米</td>
+	<td style="text-align:left;">绿色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3 到 4 米</td>
+	<td style="text-align:left;">蓝色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">4 到 5 米</td>
+	<td style="text-align:left;">黄色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">5 到 6 米</td>
+	<td style="text-align:left;">青色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">6 到 7 米</td>
+	<td style="text-align:left;">洋红色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">7 到 8 米</td>
+	<td style="text-align:left;">栗色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">8 到 9 米</td>
+	<td style="text-align:left;">蓝绿色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">9 到 10 米</td>
+	<td style="text-align:left;">橙色</td>
+</tr>
+<tr>
+	<td style="text-align:left;">10 米或以上</td>
+	<td style="text-align:left;">白色</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/visualization_shader_preview.jpg" alt="默认线框着色器用作__空间映射渲染器__组件中的 Visualization Material（线框中的颜色表示距离）">
+<figcaption>默认线框着色器用作__空间映射渲染器__组件中的 Visualization Material（线框中的颜色表示距离）</figcaption>
+</figure>
+
+<p>将新材质指定给 <strong>Visual Material</strong> 或 <strong>Occlusion Material</strong> 时，表面游戏对象的材质不会自动更改。要将新材质应用于所有表面，必须将 <strong>Render State</strong> 设置为已更改的材质（__Visual Material__ 或 __Occlusion Material__）。</p>
+
+<p>如果仅从 Unity Editor 中（直接在场景中的游戏对象上）分配 <strong>Render State</strong> 中的 <strong>Occlusion Material</strong> 或 <strong>Visual Material</strong> 属性，则空间映射会与__空间映射渲染器__组件同时销毁它们。但是，空间映射不会销毁通过脚本随组件分配或更改的任何 <strong>Occlusion Material</strong> 或 __Visual Material__，因此需要手动销毁它们。</p>
+
+<p>下面的代码片段会更改空间映射在运行时动态应用于所有表面游戏对象的材质。</p>
+
+<pre><code>
+SpatialMappingRenderer renderer = spatialMappingGameObject.AddComponent&lt;SpatialMappingRenderer&gt;();
+renderer.visualMaterial = new Material(Shader.Find("VR/SpatialMapping/Wireframe"));
+renderer.renderState = SpatialMappingRenderer.RenderState.Visualization;
+
+</code></pre>
+
+<h3>表面游戏对象</h3>
+
+<p>__空间映射渲染器__组件会在运行时创建自己独立的一组表面游戏对象。这些游戏对象出现在场景中作为一个表面父游戏对象的子项：</p>
+
+<figure>
+<img src="../uploads/Main/surface_parent.png" alt="示例表面父游戏对象和表面游戏对象子项 ">
+<figcaption>示例表面父游戏对象和表面游戏对象子项
+</figcaption>
+</figure>
+
+<p>__空间映射渲染器__生成的表面游戏对象包含以下组件</p>
+
+<ul>
+<li><p><a href="class-MeshFilter.html">网格过滤器 (Mesh Filter)</a></p></li>
+<li><p><a href="wmr_input_types.html">世界锚点 (World Anchor)</a></p></li>
+<li><p><a href="class-MeshRenderer.html">网格渲染器 (Mesh Renderer)</a></p></li>
+<li><p>共享的<a href="class-Material.html">材质</a>（此材质为 Visualization 或 Occlusion Material，具体取决于 Render State 设置）</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/surface_gameobject_with_renderer.png" alt="__空间映射渲染器__生成的表面游戏对象的 Inspector 视图">
+<figcaption>__空间映射渲染器__生成的表面游戏对象的 Inspector 视图</figcaption>
+</figure>
+
+<p>如果将多个__空间映射渲染器__组件添加到场景，则每个组件都会生成自己的一组表面游戏对象。例如，如果有两个游戏对象包含__空间映射渲染器__组件，则场景将包含两组表面游戏对象：每个组件在运行时生成一组。为了优化目的，请务必牢记这一点。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–05–01 页面已发布并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中更新了 Hololens 空间映射文档</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingCollider.html"></a></span><div class="tip">空间映射碰撞体 (Spatial Mapping Collider)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingLowLevelApi.html"></a></span><div class="tip">空间映射低级 API</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

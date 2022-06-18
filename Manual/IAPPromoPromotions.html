@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="推荐 (Promotions) - Unity 手册">
+<title>推荐 (Promotions) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/AddPromotion.png">
+<meta name="description" content="IAP 推荐 (Promotions) 使用广告位 (Placements) 来吸引目标玩家以根据其独特情况精准投放量身定制的购买机会。推荐 (Promotion) 包括三个方面：">
+<meta property="og:description" content="IAP 推荐 (Promotions) 使用广告位 (Placements) 来吸引目标玩家以根据其独特情况精准投放量身定制的购买机会。推荐 (Promotion) 包括三个方面：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'IAPPromoPromotions';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/IAPPromoPromotions.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/IAPPromoPromotions.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/IAPPromoPromotions.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/IAPPromoPromotions.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/IAPPromoPromotions.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/IAPPromoPromotions.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/IAPPromoPromotions.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/IAPPromoPromotions.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/IAPPromoPromotions.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/IAPPromoPromotions.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/IAPPromoPromotions.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/IAPPromoPromotions.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/IAPPromoPromotions.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/IAPPromoPromotions.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/IAPPromoPromotions.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/IAPPromoPromotions.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/IAPPromoPromotions.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/IAPPromoPromotions.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/IAPPromoPromotions.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/IAPPromoPromotions.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/IAPPromoPromotions.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/IAPPromoPromotions.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/IAPPromoPromotions.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/IAPPromoPromotions.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/IAPPromoPromotions.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/IAPPromoPromotions.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/IAPPromoPromotions.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/IAPPromoPromotions.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/IAPPromoPromotions.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/IAPPromoPromotions.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/IAPPromoPromotions.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/IAPPromoPromotions.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/IAPPromoPromotions.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/IAPPromoPromotions.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/IAPPromoPromotions.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/IAPPromoPromotions.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/IAPPromoPromotions.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/IAPPromoPromotions.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/IAPPromoPromotions.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/IAPPromoPromotions.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/IAPPromoPromotions.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/IAPPromoPromotions.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/IAPPromoPromotions.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/IAPPromoPromotions.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/IAPPromoPromotions.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/IAPPromoPromotions.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/IAPPromoPromotions.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/IAPPromoPromotions.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/IAPPromoPromotions.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/IAPPromoPromotions.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/IAPPromoPromotions.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/IAPPromoPromotions.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/IAPPromoPromotions.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/IAPPromoPromotions.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="IAPPromo.html">内购推荐 (IAP Promo)</a></li>
+<li>推荐 (Promotions)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromoProducts.html"></a></span><div class="tip">内购推荐 (IAP Promo) 商品目录</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IAPPromoNative.html"></a></span><div class="tip">原生推荐</div>
+</div>
+</div></div>
+<h1>推荐 (Promotions)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>IAP <strong>推荐 (Promotions)</strong> 使用<a href="https://unityads.unity3d.com/help/monetization/placements"><strong>广告位 (Placements)</strong></a> 来吸引目标玩家以根据其独特情况精准投放量身定制的购买机会。<strong>推荐 (Promotion)</strong> 包括三个方面：</p>
+
+<ul>
+<li>包含的__商品 (Products)__（请参阅有关<a href="https://docs.unity3d.com/Manual/IAPPromoProducts">内购推荐商品目录 (IAP Promo Product Catalogs)</a> 的文档）</li>
+<li>关联的__广告位__（请参阅有关<a href="https://unityads.unity3d.com/help/monetization/placements#placement-settings">广告位 (Placements)</a> 的文档）</li>
+<li>业务逻辑过滤器（<a href="#BusinessLogic">下文详述</a>）</li>
+</ul>
+
+<p>从<a href="https://operate.dashboard.unity3d.com/">开发者控制面板 (Developer Dashboard)</a> 中专门创建并管理__推荐 (Promotions)__。</p>
+
+<h2>创建推荐 (Promotions)</h2>
+
+<p>从<a href="https://operate.dashboard.unity3d.com/">开发者控制面板 (Developer Dashboard) 的 Operate 页面</a>创建__内购推荐 (IAP Promotions)__。当前操作的项目会出现在左上角。要创建推荐，请执行以下操作：</p>
+
+<p>1.从左侧导航栏中选择 <strong>Monetization</strong> &gt; <strong>IAP Promotions</strong>。此处会显示所有的现有推荐 (Promotions)。
+2.单击右上角的 <strong>ADD NEW PROMOTION</strong> 按钮。<br><br> <img src="../uploads/Main/AddPromotion.png" alt="在开发者控制面板 (Developer Dashboard) 中新建推荐 (Promotion)">
+3.输入<strong>推荐名称 (Promotion Name)</strong>，然后选择 <strong>SAVE AND CONTINUE</strong> 以进行配置。<br><br><img src="../uploads/Main/NamePromotion.png" alt="为推荐命名"></p>
+
+<p><a name="PromoWizard"></a></p>
+
+<h2>配置推荐 (Promotions)</h2>
+
+<p>在配置过程中的任何时候，都可以使用创建时间轴来选择要配置的步骤。</p>
+
+<h3>添加商品</h3>
+
+<p>单击创建时间轴的第二步 (<strong>Select Product ID(s)</strong>) 可将__商品 (Products)__ 包含在__推荐 (Promotion)__ 中。在此处将显示商品的__商品目录 (Product Catalog)__。要包含商品，该商品必须具有关联的广告素材资源。选择想要包含的符合条件的商品，然后单击 <strong>SAVE AND CONTINUE</strong> 以确认您的选择。</p>
+
+<figure>
+<img src="../uploads/Main/AddPromoProducts.png" alt="在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的商品">
+<figcaption>在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的商品</figcaption>
+</figure>
+
+<p>如需了解配置商品的更多信息，请参阅有关<a href="https://docs.unity3d.com/Manual/IAPPromoProducts">应用内购商品 (IAP Promo Products)</a> 的文档。</p>
+
+<p><strong>注意</strong>：__广告位__请求会发现要显示的所有可能__商品__的列表。如果所选的__商品__缺少广告素材资源，则不符合推荐 (Promotion) 条件，因此会被过滤掉。请参阅<a href="https://docs.unity3d.com/Manual/IAPPromo">内购推荐 (IAP Promo) 概述</a>的<strong>机器学习</strong>部分以了解更多信息。</p>
+
+<h3>添加广告位</h3>
+
+<p>单击创建时间轴的第三步 (<strong>Select Placement(s)</strong>) 可选择哪些__广告位 (Placements)__ 可显示您的__推荐 (Promotion)<strong>。在此处将显示商品的__广告位 (Placements)</strong>。要包含__广告位__，该广告位必须<a href="https://unityads.unity3d.com/help/monetization/placements#placement-settings">配置为显示 IAP 内容</a>。选择想要包含的符合条件的广告位，然后单击 <strong>SAVE AND CONTINUE</strong> 以确认您的选择。</p>
+
+<figure>
+<img src="../uploads/Main/SelectPlacements.png" alt="在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的广告位">
+<figcaption>在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的广告位</figcaption>
+</figure>
+
+<p><strong>注意</strong>：多个__广告位__可以针对同一个__推荐 (Promotion)__，反之亦然。</p>
+
+<p><a name="BusinessLogic"></a> </p>
+
+<h3>定义业务逻辑</h3>
+
+<p>单击创建时间轴的第四步 (<strong>Set up Targeting and Scheduling</strong>) 可定义__推荐 (Promotion)__ 用于确定目标客户的逻辑。</p>
+
+<p>指定__推荐 (Promotion)__ 的有效期。如果是无限持续时间，请选中 <strong>Begin Immediately</strong> 和 <strong>No End Date</strong>，否则请选择日历图标以指定开始日期和结束日期。</p>
+
+<figure>
+<img src="../uploads/Main/Scheduling.png" alt="在开发者控制面板 (Developer Dashboard) 中指定推荐 (Promotion) 的有效期">
+<figcaption>在开发者控制面板 (Developer Dashboard) 中指定推荐 (Promotion) 的有效期</figcaption>
+</figure>
+
+<h4>其他选项 (Additional Options)</h4>
+
+<p>展开 <strong>Additional Options</strong> 菜单可显示更多有针对性的推荐策略。</p>
+
+<p>1.<strong>Operating System</strong> 按 iOS 或 Android 设备过滤目标玩家。
+2.<strong>Territory</strong> 按国家或地区过滤目标玩家。
+3.<strong>Life-to-Date Revenue</strong> 按目标玩家截至目前在游戏中通过应用内购 (IAP) 花费的金额来过滤目标玩家（例如，__推荐 (Promotion)__ 可以瞄准非付费玩家或花费超过 100 美元的玩家）。<br><br><strong>注意</strong>：此杠杆存在</p>
+
+<figure>
+<img src="../uploads/Main/BusinessCriteria.png" alt="在开发者控制面板 (Developer Dashboard) 中选择推荐 (Promotions) 的目标业务条件">
+<figcaption>在开发者控制面板 (Developer Dashboard) 中选择推荐 (Promotions) 的目标业务条件</figcaption>
+</figure>
+
+<p>选择 <strong>SAVE</strong> 以完成__推荐 (Promotion)__ 的配置。</p>
+
+<figure>
+<img src="../uploads/Main/ActivePromo.png" alt="已成功激活的推荐 (Promotion)">
+<figcaption>已成功激活的推荐 (Promotion)</figcaption>
+</figure>
+
+<p>从 <strong>IAP Promotions</strong> 页面中可查看每个推荐 (Promotion) 的 <strong>Attached Products</strong> 数量、<strong>Attached Placements</strong> 数量、<strong>Schedule</strong> 和 <strong>Status</strong>。随时都可以单击__推荐 (Promotion)__ 对其进行编辑。</p>
+
+<figure>
+<img src="../uploads/Main/SavedPromo.png" alt="已成功保存的推荐 (Promotion)">
+<figcaption>已成功保存的推荐 (Promotion)</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–04–11 页面已修订并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromoProducts.html"></a></span><div class="tip">内购推荐 (IAP Promo) 商品目录</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IAPPromoNative.html"></a></span><div class="tip">原生推荐</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="在运行时实例化预制件 - Unity 手册">
+<title>在运行时实例化预制件 - Unity 手册</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="description" content="到此为止，应该从基础层面理解了__预制件__的概念。预制件是可在整个游戏中复用的预定义__游戏对象__和__组件__的集合。如果不知道预制件是什么，建议阅读预制件页面以查看更基本的介绍。">
+<meta property="og:description" content="到此为止，应该从基础层面理解了__预制件__的概念。预制件是可在整个游戏中复用的预定义__游戏对象__和__组件__的集合。如果不知道预制件是什么，建议阅读预制件页面以查看更基本的介绍。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'InstantiatingPrefabs';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/InstantiatingPrefabs.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/InstantiatingPrefabs.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/InstantiatingPrefabs.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/InstantiatingPrefabs.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/InstantiatingPrefabs.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/InstantiatingPrefabs.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/InstantiatingPrefabs.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/InstantiatingPrefabs.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/InstantiatingPrefabs.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/InstantiatingPrefabs.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/InstantiatingPrefabs.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/InstantiatingPrefabs.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/InstantiatingPrefabs.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/InstantiatingPrefabs.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/InstantiatingPrefabs.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/InstantiatingPrefabs.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/InstantiatingPrefabs.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/InstantiatingPrefabs.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/InstantiatingPrefabs.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/InstantiatingPrefabs.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/InstantiatingPrefabs.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/InstantiatingPrefabs.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/InstantiatingPrefabs.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/InstantiatingPrefabs.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/InstantiatingPrefabs.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/InstantiatingPrefabs.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/InstantiatingPrefabs.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/InstantiatingPrefabs.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/InstantiatingPrefabs.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/InstantiatingPrefabs.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/InstantiatingPrefabs.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/InstantiatingPrefabs.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/InstantiatingPrefabs.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/InstantiatingPrefabs.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/InstantiatingPrefabs.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/InstantiatingPrefabs.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/InstantiatingPrefabs.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/InstantiatingPrefabs.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/InstantiatingPrefabs.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/InstantiatingPrefabs.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/InstantiatingPrefabs.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/InstantiatingPrefabs.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/InstantiatingPrefabs.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/InstantiatingPrefabs.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/InstantiatingPrefabs.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/InstantiatingPrefabs.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/InstantiatingPrefabs.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/InstantiatingPrefabs.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/InstantiatingPrefabs.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/InstantiatingPrefabs.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/InstantiatingPrefabs.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/InstantiatingPrefabs.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/InstantiatingPrefabs.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/InstantiatingPrefabs.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li><a href="Prefabs.html">预制件</a></li>
+<li>在运行时实例化预制件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnpackingPrefabInstances.html"></a></span><div class="tip">解压缩预制件实例</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Input.html"></a></span><div class="tip">输入</div>
+</div>
+</div></div>
+<h1>在运行时实例化预制件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>到此为止，应该从基础层面理解了__预制件__的概念。预制件是可在整个游戏中复用的预定义__游戏对象__和__组件__的集合。如果不知道预制件是什么，建议阅读<a href="Prefabs.html">预制件</a>页面以查看更基本的介绍。</p>
+
+<p>想要在运行时实例化复杂的游戏对象时，预制件非常方便。实例化预制件的替代方法是使用代码从头开始创建游戏对象。相对于替代方法，实例化预制件具有诸多优势：</p>
+
+<ul>
+<li>可以从一行代码实例化具有完整功能的预制件。从代码创建等效的游戏对象平均需要五行代码，但可能需要更多代码行。</li>
+<li>可以在场景和 Inspector 中快速轻松地设置、测试和修改预制件。</li>
+<li>可以更改实例化的预制件，而无需更改将预制件实例化的代码。无需更改代码就能将简单火箭改为超级火箭。</li>
+</ul>
+
+<h2>常见情况</h2>
+
+<p>为了说明预制件的优势，让我们考虑一下适合使用预制件的一些基本情况：</p>
+
+<p>1.通过在不同位置多次创建单块“砖”预制件来筑墙。
+1.火箭发射器在发射时实例化飞行的火箭预制件。预制件包含网格、<strong>刚体</strong>、__碰撞体__以及自带轨迹__粒子系统__的子游戏对象。
+1.一个机器人爆炸成大量碎片。完整正常的机器人被摧毁，然后替换为残骸机器人预制件。此预制件由分成许多部件的机器人组成，所有部件都有自己的刚体和粒子系统。此方法允许将机器人炸成许多碎片（只需一行代码），用一个预制件替换一个对象。</p>
+
+<h3>筑墙</h3>
+
+<p>此示例旨在说明使用预制件相对于从代码创建对象的优势。</p>
+
+<p>首先，利用代码来修建砖墙：</p>
+
+<pre><code>public class Instantiation : MonoBehaviour 
+{
+    void Start()
+    {
+        for (int y = 0; y &lt; 5; y++) 
+        {
+            for (int x = 0; x &lt; 5; x++) 
+            {
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube.AddComponent&lt;Rigidbody&gt;();
+                cube.transform.position = new Vector3(x, y, 0);
+            }
+        }
+    }
+}
+</code></pre>
+
+<ul>
+<li>要使用以上脚本，我们只需保存脚本并将其拖到空游戏对象上。</li>
+<li>通过 <strong>GameObject &gt; Create Empty</strong> 来创建空游戏对象。</li>
+</ul>
+
+<p>如果执行该代码，则会在进入播放模式时看到已创建整个砖墙。有两行与每块砖的功能相关：<code>CreatePrimitive</code> 行和 <code>AddComponent</code> 行。现在还不算太差，但我们的每块砖都没有纹理。想要针对砖块执行的每个额外操作（如更改纹理、摩擦或刚体__质量__）都是额外的行。</p>
+
+<p>如果事先创建预制件并执行所有设置，则使用一行代码来执行每块砖的创建和设置即可。这样一来，在决定要进行更改时，可以减轻维护和更改大量代码的工作量。对于预制件，只需进行更改和播放即可。无需更改代码。</p>
+
+<p>如果将预制件用于每块砖，下面就是筑墙所需的代码。</p>
+
+<pre><code>//Instantiate 接受任何组件类型，因为它会实例化游戏对象 
+
+public Transform brick;
+
+void Start() 
+{
+    for (int y = 0; y &lt; 5; y++)
+    {
+        for (int x = 0; x &lt; 5; x++) 
+        {
+            Instantiate(brick, new Vector3(x, y, 0), Quaternion.identity);
+        }
+    }
+}
+</code></pre>
+
+<p>此代码不仅很整洁，而且可复用性很强。没有任何信息表示我们要实例化立方体或者它必须包含刚体。所有这些都在预制件中定义，并可以在 Editor 中快速创建。</p>
+
+<p>现在，我们只需创建预制件，为此我们将在 Editor 中执行此操作。以下是创建方法：</p>
+
+<p>1.选择 <strong>GameObject &gt; 3D Object &gt; Cube</strong>
+1.选择 <strong>Component &gt; Physics &gt; Rigidbody</strong>
+1.选择 <strong>Assets &gt; Create &gt; Prefab</strong>
+1.在 <strong>Project 视图__中，将新预制件的名称更改为“Brick”
+1.将__层级视图__中创建的立方体拖入 </strong>Project 视图__中的“Brick”预制件上
+1.创建预制件后，可以放心地从层级视图中删除立方体（Windows 上使用 <strong>Delete__，Mac 上使用 </strong>Command-Backspace__）</p>
+
+<p>我们已创建 Brick 预制件，所以现在必须将此预制件附加到脚本中的 <strong>brick</strong> 变量。选择包含脚本的空游戏对象时，Brick 变量将显示在 Inspector 中。</p>
+
+<p>现在，将“Brick”预制件从 Project 视图拖到 Inspector 中的 <strong>brick</strong> 变量上。按 Play，然后就会看到用预制件建造的墙。</p>
+
+<p>这是一种可以在 Unity 中反复使用的工作流程模式。一开始，您可能想知道为什么此方法的效果会好得多，因为从代码创建立方体的脚本只增加了 2 行而已。</p>
+
+<p>但是由于现在使用的是预制件，所以可以在几秒内调整预制件。想要改变所有这些实例的质量？仅在预制件中调整一次刚体即可。要将其他__材质__用于所有实例？仅将材质拖到预制件上一次即可。要更改摩擦力？将其他__物理材质__用于预制件的碰撞体。要将粒子系统添加到所有的这些盒体？仅将子项添加到预制件一次即可。</p>
+
+<h3>将火箭和爆炸实例化</h3>
+
+<p>以下是将预制件用于此情况的方式：</p>
+
+<p>1.用户按下发射时，火箭发射器将火箭预制件实例化。预制件包含网格、刚体、碰撞体以及含有轨迹粒子系统的子游戏对象。
+1.火箭会影响爆炸预制件并将其实例化。爆炸预制件包含粒子系统、随着时间推移而淡出的光源以及对周围游戏对象施加伤害的脚本。</p>
+
+<p>虽然可以完全从代码构建火箭游戏对象，但是如果手动添加组件和设置属性，实例化预制件会容易得多。无论火箭的预制件多复杂，都可以仅用一行代码就将火箭实例化。在实例化预制件之后，还可以修改实例化的对象的任何属性（例如，可以设置火箭刚体的速度）。</p>
+
+<p>除了预制件更易于使用之外，还可以稍后更新预制件。因此，如果正在构建火箭，不必立即向其添加粒子轨迹。可以稍后执行此操作。一旦将轨迹作为子游戏对象添加到预制件，所有实例化火箭就会具有粒子轨迹。最后，可以在 Inspector 中快速调整火箭预制件的属性，从而更轻松地对游戏进行微调。</p>
+
+<p>以下脚本显示了如何使用 <strong>Instantiate()</strong> 函数来发射火箭。</p>
+
+<pre><code>// 要求火箭是一个刚体。
+// 这样，我们就无法在没有刚体的情况下分配预制件
+public Rigidbody rocket;
+public float speed = 10f;
+
+void FireRocket () 
+{
+    Rigidbody rocketClone = (Rigidbody) Instantiate(rocket, transform.position, transform.rotation);
+    rocketClone.velocity = transform.forward * speed;
+    
+    // 您还可以访问克隆体的其他组件/脚本
+    rocketClone.GetComponent&lt;MyRocketScript&gt;().DoSomething();
+}
+
+// 按住 Ctrl 或鼠标时调用 fire 方法
+void Update () 
+{
+    if (Input.GetButtonDown("Fire1"))
+    {
+        FireRocket();
+    }
+}
+
+
+</code></pre>
+
+<h3>用布娃娃或残骸替换角色</h3>
+
+<p>假设有一个完备的敌人角色死亡。只需在角色上播放死亡动画，并禁用通常处理敌人逻辑的所有脚本。可能必须注意要删除几个脚本，添加一些自定义逻辑以确保没有人会继续攻击已死亡的敌人，以及处理其他善后任务。</p>
+
+<p>一种好得多的方法是立即删除整个角色并将其替换为实例化的残骸预制件。这样可以提供很大的灵活性。可以将其他材质用作死亡角色、附加完全不同的脚本、生成预制件（包含破坏成大量碎片的对象以模拟支离破碎的敌人）或者只是将包含该角色版本的预制件实例化。</p>
+
+<p>只需单次调用 <strong>Instantiate()</strong> 就可以实现这些任意选项，只需将其连接到正确的预制件即可！</p>
+
+<p>需要记住的重要事项是执行 <strong>Instantiate()</strong> 的残骸可以由完全不同于原件的对象组成。例如，如果有一架飞机，可对两个版本建模。一个版本中，飞机包含具有__网格渲染器__的单个游戏对象以及用于飞机物理设置的脚本。通过将此模型仅保持在一个游戏对象中，游戏可以运行得更快，因为可以使用较少的三角形来制作模型，并且由于游戏包含的对象较少，因此渲染速度比使用许多小部件的情况下更快。此外，飞机四处自由飞行时，没有理由将其放在单独部件中。</p>
+
+<p>要构建残骸飞机预制件，典型的步骤是：</p>
+
+<p>1.在偏好的建模器中用大量不同部件对飞机建模
+1.创建空场景
+1.将模型拖入空场景
+1.通过选中所有部件并选择 <strong>Component &gt; Physics &gt; Rigidbody__，将刚体添加到所有部件
+1.通过选中所有部件并选择 </strong>Component &gt; Physics &gt; Box Collider__，将盒型碰撞体添加到所有部件
+1.要获得额外的特殊效果，请将类似烟雾的粒子系统添加为每个部件的子游戏对象
+1.现在有一架带有多个爆坏部件的飞机，这些部件会根据物理原理落到地面，并由于附加的粒子系统而产生粒子轨迹。按 Play 来预览模型的反应并进行必要调整。
+1.选择 <strong>Assets &gt; Create Prefab</strong>
+1.将包含所有飞机部件的根游戏对象拖动到预制件中</p>
+
+<p>以下示例演示了如何在代码中对这些步骤建模。</p>
+
+<pre><code>public GameObject wreck;
+
+// 例如，我们会 3 秒后自动将游戏对象变为残骸
+IEnumerator Start() 
+{
+    yield return new WaitForSeconds(3);
+    KillSelf();
+}
+
+// 按住 Ctrl 或鼠标时调用 fire 方法
+void KillSelf () 
+{
+    // 在我们所处的同一位置将残骸游戏对象实例化
+    GameObject wreckClone = (GameObject) Instantiate(wreck, transform.position, transform.rotation);
+    
+    // 有时我们需要将一些变量从此对象转移
+    // 到残骸
+    wreckClone.GetComponent&lt;MyScript&gt;().someVariable = GetComponent&lt;MyScript&gt;().someVariable;
+    
+    // 自行终止
+    Destroy(gameObject);
+}
+
+</code></pre>
+
+<h3>在特定图案中放置一堆对象</h3>
+
+<p>假设想要将一堆对象放在网格或圆形图案中。一般可以按以下方式之一完成此操作：</p>
+
+<p>1.完全从代码构建对象。这很乏味！从脚本输入值既慢又不直观，得不偿失。
+1.创建完备的对象，复制该对象，并在场景中多次放置该对象。这很乏味，难以将对象准确放置在网格中。</p>
+
+<p>因此最好是对预制件使用 <strong>Instantiate()</strong>！我们认为您已了解为什么预制件在这些场景中非常有用。以下是这些场景所需的代码：</p>
+
+<pre><code>// 将圆形中的预制件实例化
+
+public GameObject prefab;
+public int numberOfObjects = 20;
+public float radius = 5f;
+
+void Start() 
+{
+    for (int i = 0; i &lt; numberOfObjects; i++)
+    {
+        float angle = i * Mathf.PI * 2 / numberOfObjects;
+        Vector3 pos = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
+        Instantiate(prefab, pos, Quaternion.identity);
+    }
+}
+
+</code></pre>
+
+<pre><code>// 将网格中的预制件实例化
+
+public GameObject prefab;
+public float gridX = 5f;
+public float gridY = 5f;
+public float spacing = 2f;
+
+void Start()
+{
+    for (int y = 0; y &lt; gridY; y++) 
+    {
+        for (int x = 0; x &lt; gridX; x++)
+        {
+            Vector3 pos = new Vector3(x, 0, y) * spacing;
+            Instantiate(prefab, pos, Quaternion.identity);
+        }
+    }
+}
+
+
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnpackingPrefabInstances.html"></a></span><div class="tip">解压缩预制件实例</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Input.html"></a></span><div class="tip">输入</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

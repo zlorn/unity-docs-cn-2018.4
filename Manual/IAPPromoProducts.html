@@ -1,0 +1,347 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="内购推荐 (IAP Promo) 商品目录 - Unity 手册">
+<title>内购推荐 (IAP Promo) 商品目录 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/ExportCatalogJSON.png">
+<meta name="description" content="Unity IAP 提供快速简单的工具来创建和导出__商品目录__ (Product Catalogs)。使用 Unity Editor 的 IAP Catalog 窗口可填写__商品__元数据，然后将目录导出到开发者控制面板 (Developer Dashboard) 以配置每个商品的广告素材资源。请注意，也可以在控制面板中手动将商品添加到目录中，如下所述。">
+<meta property="og:description" content="Unity IAP 提供快速简单的工具来创建和导出__商品目录__ (Product Catalogs)。使用 Unity Editor 的 IAP Catalog 窗口可填写__商品__元数据，然后将目录导出到开发者控制面板 (Developer Dashboard) 以配置每个商品的广告素材资源。请注意，也可以在控制面板中手动将商品添加到目录中，如下所述。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'IAPPromoProducts';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/IAPPromoProducts.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/IAPPromoProducts.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/IAPPromoProducts.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/IAPPromoProducts.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/IAPPromoProducts.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/IAPPromoProducts.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/IAPPromoProducts.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/IAPPromoProducts.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/IAPPromoProducts.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/IAPPromoProducts.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/IAPPromoProducts.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/IAPPromoProducts.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/IAPPromoProducts.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/IAPPromoProducts.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/IAPPromoProducts.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/IAPPromoProducts.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/IAPPromoProducts.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/IAPPromoProducts.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/IAPPromoProducts.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/IAPPromoProducts.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/IAPPromoProducts.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/IAPPromoProducts.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/IAPPromoProducts.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/IAPPromoProducts.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/IAPPromoProducts.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/IAPPromoProducts.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/IAPPromoProducts.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/IAPPromoProducts.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/IAPPromoProducts.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/IAPPromoProducts.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/IAPPromoProducts.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/IAPPromoProducts.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/IAPPromoProducts.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/IAPPromoProducts.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/IAPPromoProducts.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/IAPPromoProducts.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/IAPPromoProducts.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/IAPPromoProducts.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/IAPPromoProducts.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/IAPPromoProducts.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/IAPPromoProducts.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/IAPPromoProducts.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/IAPPromoProducts.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/IAPPromoProducts.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/IAPPromoProducts.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/IAPPromoProducts.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/IAPPromoProducts.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/IAPPromoProducts.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/IAPPromoProducts.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/IAPPromoProducts.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/IAPPromoProducts.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/IAPPromoProducts.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/IAPPromoProducts.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/IAPPromoProducts.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="IAPPromo.html">内购推荐 (IAP Promo)</a></li>
+<li>内购推荐 (IAP Promo) 商品目录</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromoIntegration.html"></a></span><div class="tip">内购推荐 (IAP Promo) 集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IAPPromoPromotions.html"></a></span><div class="tip">推荐 (Promotions)</div>
+</div>
+</div></div>
+<h1>内购推荐 (IAP Promo) 商品目录</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity IAP 提供快速简单的工具来创建和导出__商品目录__ (Product Catalogs)。使用 Unity Editor 的 <strong>IAP Catalog</strong> 窗口可填写__商品__元数据，然后将目录导出到<a href="https://operate.dashboard.unity3d.com">开发者控制面板 (Developer Dashboard)</a> 以配置每个商品的广告素材资源。请注意，也可以在控制面板中手动将商品添加到目录中，如下所述。</p>
+
+<h2>创建商品目录</h2>
+
+<p><a name="CatalogWindow"></a></p>
+
+<h3>在 IAP Catalog 窗口中添加商品</h3>
+
+<p>在 Editor 中，选择 <strong>Window</strong> &gt; <strong>UnityIAP</strong> &gt; <strong>IAP Catalog</strong> 以打开 IAP Catalog 窗口。该 GUI 列出了以前配置的所有__商品__，并允许您为每个商品定义以下属性：</p>
+
+<ul>
+<li>
+<strong>Name</strong>（名称）</li>
+<li>
+<strong>Product ID</strong>（商品 ID）</li>
+<li>
+<strong>Type</strong>（类型）：内购推荐现在支持 <strong>Consumable</strong> 和 <strong>Non-consumable</strong> 商品类型</li>
+<li>
+<strong>Price</strong>（价格）：Unity 建议单独为 Google 和 Apple 商店指定价格点（如果您的应用程序同时支持两者）</li>
+</ul>
+
+<p><strong>注意</strong>：__商品目录__必须至少配置一个__商品__才能导出。有关设置商品的完整过程，请参阅有关 <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a> 的文档。</p>
+
+<p>您可能已经使用构建器 (builder) 脚本为 Unity IAP 填充了商品目录。例如：</p>
+
+<pre><code>var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
+builder.AddProduct(product_coins, ProductType.Consumable);
+builder.AddProduct(product_hat, ProductType.NonConsumable);
+builder.AddProduct(product_elite, ProductType.Subscription);
+</code></pre>
+
+<p>因为内购推荐 (IAP Promo) 仅支持从 Editor <strong>IAP Catalog</strong> GUI 导出 JSON，所以我们建议按如下方式修改您的方法：</p>
+
+<p>1.将__商品__复制粘贴到 <strong>IAP Catalog</strong> GUI。
+2.从购买脚本中删除或注释掉现有的 <code>builder.AddProduct()</code> 代码。
+3.在初始化 IAP 之前添加以下代码以从 <strong>IAP Catalog</strong> GUI 获取商品列表：</p>
+
+<pre><code>StandardPurchasingModule module = StandardPurchasingModule.Instance();
+ProductCatalog catalog = ProductCatalog.LoadDefaultCatalog();
+ConfigurationBuilder builder = ConfigurationBuilder.Instance(module);
+IAPConfigurationHelper.PopulateConfigurationBuilder(ref builder, catalog);
+
+UnityPurchasing.Initialize(this, builder);
+</code></pre>
+
+<p><a name="ExportCatalog"></a> </p>
+
+<h3>导出商品目录</h3>
+
+<p>在 <strong>IAP Catalog</strong> 窗口中，选择 <strong>App Store Export</strong> &gt; <strong>Cloud JSON</strong> 以导出商品目录的本地副本。</p>
+
+<figure>
+<img src="../uploads/Main/ExportCatalogJSON.png" alt="将商品目录导出到 JSON">
+<figcaption>将商品目录导出到 JSON</figcaption>
+</figure>
+
+<p><a name="ConfigureCreatives"></a></p>
+
+<h3>在开发者控制面板 (Developer Dashboard) 中配置创意资源</h3>
+
+<p>在<a href="https://operate.dashboard.unity3d.com/">开发者控制面板 (Developer Dashboard) 的 Operate 页面</a>上配置商品目录 (Product Catalog)。当前操作的项目会出现在左上角。要管理商品，请从左侧导航栏中选择 <strong>Monetization</strong> &gt; <strong>In-App Purchases</strong>。</p>
+
+<p>可以手动填充商品，也可以通过导入 JSON 文件批量填充商品。</p>
+
+<h4>手动创建商品</h4>
+
+<p>从<a href="https://operate.dashboard.unity3d.com">控制面板</a>的商品配置菜单 (<strong>Monetization</strong> &gt; <strong>In-App Purchases</strong>) 中，单击右上角的 <strong>ADD NEW PRODUCT</strong> 按钮，然后输入以下详细信息：</p>
+
+<ul>
+<li>__Product ID__（在 IAP 代码中引用）</li>
+<li>
+<strong>Name</strong>（名称）</li>
+<li>
+<strong>Type</strong>（__Consumable__ 或 __Non-Consumable__）</li>
+<li>
+<strong>Apple App Store Price</strong> (USD)</li>
+<li>
+<strong>Google Play Store Price</strong> (USD)</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AddProduct.png" alt="在开发者控制面板 (Developer Dashboard) 上手动添加新的 IAP 商品">
+<figcaption>在开发者控制面板 (Developer Dashboard) 上手动添加新的 IAP 商品</figcaption>
+</figure>
+
+<p>单击 <strong>SAVE</strong> 按钮可将商品存储到目录中。</p>
+
+<h4>导入商品目录</h4>
+
+<p>要设置新的__商品目录__或更新目录中的现有__商品__：</p>
+
+<p>1.选择 <strong>UPLOAD JSON</strong>。
+2.选择先前<a href="#CatalogWindow">从 Unity Editor 导出</a>的 JSON 文件。然后会有差异日志提示您批准更改。检查文件的内容，然后选择 <strong>APPROVE CHANGES</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/UploadCatalog.png" alt="将 IAP 商品目录导入开发者控制面板 (Developer Dashboard)">
+<figcaption>将 IAP 商品目录导入开发者控制面板 (Developer Dashboard)</figcaption>
+</figure>
+
+<p>导入的__商品__将出现在 <strong>Product Catalog</strong>（商品目录）列表中。但是，为了符合__推荐 (Promotions)__ 的条件，每个__商品__必须具有关联的创意资源（否则__广告位__无法显示任何内容）。</p>
+
+<h4>分配创意资源</h4>
+
+<p>要添加创意资源，请遵循以下步骤：</p>
+
+<p>1.从 <strong>Product Catalog</strong> 列表中选择一个__商品__，然后向下滚动到 <strong>Creative Uploads</strong> 部分。<br><br><strong>注意</strong>：虽然每个商品的 __Product ID__（商品 ID）、<strong>Name</strong>（名称）、<strong>Price</strong>（价格）和 <strong>Type</strong>（类型）显示在控制面板中，但是只能从 Unity Editor 的 <strong>IAP Catalog</strong> 窗口中编辑这些属性。<br><br>
+2.要为不同区域指定独特的创意资源，请选择 <strong>ADD LANGUAGE</strong>，然后选中要包含的语言。<br><br> <br><br> <img src="../uploads/Main/AddLanguage.png" alt="Incorporating unique creative assets for different languages in the Developer Dashboard"><br><strong>注意</strong>：下拉列表会显示正在编辑的当前语言。如果添加的语言没有创意资源，则会默认使用其 <strong>English (United States)</strong>（美国英语）创意资源。<br><br> </p>
+
+<p>3.按照以下准则，为手机和平板电脑设备上传<strong>纵向</strong> (Portrait) 或<strong>横向</strong> (Landscape) 创意资源：<br><br>
+ * PNG 或 JPG 文件格式。
+ * 每个__商品__要求一个创意资源至少有一种配置才符合__推荐 (Promotions)__ 的条件。为了获得更好的消费体验，请为每种设备和方向提供经过优化的创意资源。
+ * <strong>手机</strong>创意资源尺寸为 580 x 1035 像素（纵向方向）或 1035 x 580 像素（横向方向）。
+ * <strong>平板电脑</strong>创意资源尺寸为 900 x 1200 像素（纵向方向）或 1200 x 900 像素（横向方向）。
+4.选择 <strong>UPLOAD CREATIVE</strong> 以便上传创意资源。左侧会显示预览。
+5.按照以下准则，选择 <strong>UPLOAD PURCHASE BUTTON</strong> 将一个交互式按钮置于创意资源上：<br><br>
+ * 必须上传购买按钮才能继续。
+ * 按钮资源的最小文件大小为 60 x 60 像素。
+ * 可以单击并拖动预览窗口上的购买按钮来放置该按钮。
+ * 可以设置按钮文本的字体、颜色和大小。<br><br> <img src="../uploads/Main/UploadCreatives.png" alt="开发者控制面板 (Developer Dashboard) 中的创意资源上传界面概览">
+6.选择 <strong>SAVE</strong> 以继续。返回到 <strong>Product Catalog</strong> 页面后，__商品__现在__符合推荐条件 (Promotion-eligible)__，如 <strong>Creative Attached</strong> 列所示。<br><br> <img src="../uploads/Main/UpdatedProduct.png" alt="开发者控制面板 (Developer Dashboard) 中现在符合推荐 (Promotions) 条件的商品"></p>
+
+<p><strong>注意</strong>：还必须将__商品目录__提交到相应的 Google Play 或 iTunes 应用商店，才能执行购买流程。请参阅有关 <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a> 的文档中的<strong>导出</strong>部分。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–04–11 页面已修订并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromoIntegration.html"></a></span><div class="tip">内购推荐 (IAP Promo) 集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IAPPromoPromotions.html"></a></span><div class="tip">推荐 (Promotions)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

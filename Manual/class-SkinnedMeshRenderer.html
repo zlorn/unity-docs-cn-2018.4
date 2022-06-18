@@ -1,0 +1,359 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="带蒙皮的网格渲染器 (Skinned Mesh Renderer) - Unity 手册">
+<title>带蒙皮的网格渲染器 (Skinned Mesh Renderer) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/Inspector-SkinnedMeshRenderer.png">
+<meta name="description" content="Unity 使用__带蒙皮的网格渲染器 (Skinned Mesh Renderer)__ 组件来渲染__骨骼__动画；此类动画中的网格形状由预定义的动画序列进行变形。这种技术对于关节弯曲的角色和其他对象（与关节更像铰链的机器相反）非常有用。">
+<meta property="og:description" content="Unity 使用__带蒙皮的网格渲染器 (Skinned Mesh Renderer)__ 组件来渲染__骨骼__动画；此类动画中的网格形状由预定义的动画序列进行变形。这种技术对于关节弯曲的角色和其他对象（与关节更像铰链的机器相反）非常有用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-SkinnedMeshRenderer';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/class-SkinnedMeshRenderer.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/class-SkinnedMeshRenderer.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/class-SkinnedMeshRenderer.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/class-SkinnedMeshRenderer.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/class-SkinnedMeshRenderer.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/class-SkinnedMeshRenderer.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/class-SkinnedMeshRenderer.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/class-SkinnedMeshRenderer.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/class-SkinnedMeshRenderer.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/class-SkinnedMeshRenderer.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/class-SkinnedMeshRenderer.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-SkinnedMeshRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-SkinnedMeshRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-SkinnedMeshRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-SkinnedMeshRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-SkinnedMeshRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-SkinnedMeshRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-SkinnedMeshRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-SkinnedMeshRenderer.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-SkinnedMeshRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-SkinnedMeshRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-SkinnedMeshRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-SkinnedMeshRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-SkinnedMeshRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-SkinnedMeshRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-SkinnedMeshRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-SkinnedMeshRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-SkinnedMeshRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-SkinnedMeshRenderer.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/class-SkinnedMeshRenderer.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-SkinnedMeshRenderer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-SkinnedMeshRenderer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-SkinnedMeshRenderer.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/class-SkinnedMeshRenderer.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/class-SkinnedMeshRenderer.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/class-SkinnedMeshRenderer.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/class-SkinnedMeshRenderer.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-SkinnedMeshRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-SkinnedMeshRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-SkinnedMeshRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-SkinnedMeshRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-SkinnedMeshRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-SkinnedMeshRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-SkinnedMeshRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-SkinnedMeshRenderer.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-SkinnedMeshRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-SkinnedMeshRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-SkinnedMeshRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-SkinnedMeshRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-SkinnedMeshRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-SkinnedMeshRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-SkinnedMeshRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-SkinnedMeshRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-SkinnedMeshRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-MeshGroup.html">网格组件</a></li>
+<li>带蒙皮的网格渲染器 (Skinned Mesh Renderer)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-MeshRenderer.html"></a></span><div class="tip">网格渲染器 (Mesh Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextMesh.html"></a></span><div class="tip">文本网格</div>
+</div>
+</div></div>
+<h1>带蒙皮的网格渲染器 (Skinned Mesh Renderer)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 使用__带蒙皮的网格渲染器 (Skinned Mesh Renderer)__ 组件来渲染__骨骼__动画；此类动画中的网格形状由预定义的动画序列进行变形。这种技术对于关节弯曲的角色和其他对象（与关节更像铰链的机器相反）非常有用。</p>
+
+<p>带蒙皮的网格渲染器会在导入时自动添加到需要它的网格。</p>
+
+<h2>属性</h2>
+
+<figure>
+<img src="../uploads/Main/Inspector-SkinnedMeshRenderer.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Cast Shadows</strong></td>
+	<td style="text-align:left;">如果启用此属性，当合适的<a href="class-Light.html">光源</a>照射在网格上时，网格将投射阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Receive Shadows</strong></td>
+	<td style="text-align:left;">如果启用此属性，网格将显示其他对象投射的阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Motion Vectors</strong></td>
+	<td style="text-align:left;">如果启用此属性，则线会将运动矢量渲染到摄像机运动矢量纹理中。请参阅脚本 API 参考文档中的 <a href="../ScriptReference/Renderer-motionVectors.html">Renderer.motionVectors</a> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Materials</strong></td>
+	<td style="text-align:left;">网格渲染时使用的__材质__的列表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Light Probes</strong></td>
+	<td style="text-align:left;">基于探针的光照插值模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection Probes</strong></td>
+	<td style="text-align:left;">如果启用此属性，并且场景中存在反射探针，则将为此游戏对象拾取反射纹理，并将此纹理设置为内置的着色器 uniform 变量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anchor Override</strong></td>
+	<td style="text-align:left;">使用光照探针或反射探针系统时用变换来确定插值位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Quality</strong></td>
+	<td style="text-align:left;">定义蒙皮时每个顶点使用的最大骨骼数。骨骼数量越多，渲染器的质量越高。将 <strong>Quality</strong> 设置为 <strong>Auto</strong> 将使用来自 <a href="class-QualitySettings.html">Quality</a> 设置窗口的 <strong>Blend Weights</strong> 值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Skinned Motion Vectors</strong></td>
+	<td style="text-align:left;">如果启用此属性，则将对网格蒙皮数据进行双重缓冲，以便能够插入蒙皮运动并将其置于运动矢量纹理中。此过程存在 GPU 内存开销，但会带来更正确的运动矢量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Update When Offscreen</strong></td>
+	<td style="text-align:left;">如果启用此属性，即使任何摄像机都无法看到蒙皮网格，也会对其进行更新。如果禁用此属性，当游戏对象在屏幕外时，动画本身也将停止运行。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mesh</strong></td>
+	<td style="text-align:left;">使用此属性可定义该渲染器使用的网格。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Root Bone</strong></td>
+	<td style="text-align:left;">使用此属性可定义作为动画“根”的骨骼（即，所有其他骨骼移动时参照的相对骨骼）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounds</strong></td>
+	<td style="text-align:left;">用于判定网格是否超出屏幕外的包围体。构成此包围体的边界是在导入时从模型文件中的网格和动画预先计算的，并在 Scene 视图中显示为模型周围的线框。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>__骨骼__是蒙皮网格内的不可见对象，会影响网格在动画过程中的变形方式。基本思想是将骨骼连接在一起形成分层的“骨架”，并通过旋转骨架的关节使其移动来定义动画。每个骨骼都附着在周围网格的一些顶点上。播放动画时，顶点会随着它们所连接的一个或多个骨骼移动，因此“皮肤”也跟随骨架移动。在简单的关节（例如肘部）处，网格顶点受到在此处相交的两个骨骼的影响，当关节弯曲时，网格将逼真地伸展和旋转。在更复杂的情况下，两个以上的骨骼会影响网格的特定区域，从而产生更微妙的移动。</p>
+
+<p>虽然蒙皮网格最常用于预定义动画，但也可将<a href="class-Rigidbody.html">刚体组件</a>附加到骨架中的每个骨骼，从而将其置于物理引擎的控制之下。这种做法通常用于创建“布娃娃”效果；在此效果中，角色在被抛出或被爆炸击中后，四肢胡乱摆动。</p>
+
+<h3>质量 (Quality)</h3>
+
+<p>Unity 可用一个、两个或四个骨骼对每个顶点进行蒙皮。使用四个骨骼可以获得最佳效果，但这会带来更高的处理开销。游戏通常使用两个骨骼权重，这是视觉质量与性能之间的良好折衷。</p>
+
+<p>如果 <strong>Quality</strong> 设置为 <strong>Auto__，Unity 将使用来自 <a href="class-QualitySettings.html">Quality</a> 设置窗口的 </strong>Blend Weights__ 值。这种情况下，终端用户可自行选择质量设置，并根据需要获得动画质量与帧率之间的平衡。</p>
+
+<h3>在屏幕外时更新 (Update When Offscreen)</h3>
+
+<p>默认情况下，不更新任何摄像机都看不到的蒙皮网格。在网格返回屏幕之前，不会更新蒙皮。这样做是为了节省系统资源。</p>
+
+<p>对象的可见性由网格的 <strong>Bounds</strong> 属性确定（也就是说，整个包围体必须在所有激活的摄像机的视野之外）。但是，动画网格的真实包围体可能随着动画的播放而变化（例如，如果角色将手举到空中，则包围体会变高）。Unity 在计算最大包围体积时会考虑所有附加的动画，但有时无法通过计算包围体边界来预测每个可能的用例。</p>
+
+<p>以下每个示例情况在将骨骼或顶点推出预先计算的包围体时都会出现问题：</p>
+
+<ul>
+<li>在运行时添加的动画</li>
+<li>附加动画</li>
+<li>使用程序从脚本中更改骨骼的位置</li>
+<li>使用的顶点着色器可将顶点推到预先计算的包围边界之外</li>
+<li>使用布娃娃</li>
+</ul>
+
+<p>在这些情况下，有两种解决方案：</p>
+
+<p>1.修改 Bounds 的值以匹配网格的潜在包围体
+1.启用 <strong>Update When Offscreen</strong> 以始终进行蒙皮和渲染蒙皮网格</p>
+
+<p>通常应该使用第一个选项，因为它对性能更有利。但是，如果性能不是主要问题，或者如果无法预测包围体的大小（例如，使用布娃娃时），则第二个选项更合适。</p>
+
+<p>为了使蒙皮网格在使用布娃娃时有更好的表现，Unity 会在导入带蒙皮的网格渲染器时自动将其重新映射到根骨骼。但是，仅当模型文件中只有一个带蒙皮的网格渲染器，Unity 才会执行此操作。这意味着，如果无法将所有带蒙皮的网格渲染器附加到根骨骼或子项，而又使用布娃娃，则应关闭此优化。</p>
+
+<h2>导入蒙皮网格</h2>
+
+<p>目前，可从以下位置导入蒙皮网格：</p>
+
+<ul>
+<li>Autodesk® Maya®</li>
+<li>Cinema4D</li>
+<li>Autodesk® 3ds Max®</li>
+<li>Blender</li>
+<li>Cheetah 3D</li>
+<li>XSI</li>
+<li>任何支持 FBX 格式的工具</li>
+</ul>
+
+<p>在移动设备上，Unity 使用手动编码的 NEON/VFP 程序集在 CPU 上处理蒙皮。这种情况下的一个限制是法线和切线未标准化，所以如果您正在编写您自己的着色器，应自己处理该标准化。但是，如果使用<a href="SL-SurfaceShaders.html">表面着色器</a>，则 Unity 会自动处理标准化。</p>
+
+<p><strong>注意：</strong>优化的网格与非优化的网格在骨骼的排序方式上不同，可能导致重大的动画问题。这是因为非优化的网格依赖于骨骼顺序来生成动画，而优化的网格使用骨骼名称而不依赖于骨骼顺序。</p>
+
+<p>如果您只是导入并使用 FBX 文件，Unity 将负责变换的顺序问题。</p>
+
+<p>对于高级用户，如果要更改 <code>SkinnedMeshRenderer.sharedMesh</code>：</p>
+
+<p>1.在“非优化”模式下，需要确保 <code>SkinnedMeshRenderer.bones</code> 与 <code>SkinnedMeshRenderer.sharedMesh</code> 严格匹配。引用的变换应该就会处于正确的顺序。
+2.在优化模式下简单得多；只要化身具有引用的骨骼，渲染就能正常进行。在这种情况下，<code>SkinnedMeshRenderer.bones</code> 始终为空。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-MeshRenderer.html"></a></span><div class="tip">网格渲染器 (Mesh Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextMesh.html"></a></span><div class="tip">文本网格</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="HDRI 视图 - Unity 手册">
+<title>HDRI 视图 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/LookDevHDRIView-0.png">
+<meta name="description" content="Look Dev 中的光照由 HDRI（高动态范围图像）表示。Look Dev视图允许您在HDRI之间进行操作和轻松切换。">
+<meta property="og:description" content="Look Dev 中的光照由 HDRI（高动态范围图像）表示。Look Dev视图允许您在HDRI之间进行操作和轻松切换。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'LookDevHDRIView';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/LookDevHDRIView.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/LookDevHDRIView.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/LookDevHDRIView.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/LookDevHDRIView.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/LookDevHDRIView.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/LookDevHDRIView.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/LookDevHDRIView.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/LookDevHDRIView.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/LookDevHDRIView.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/LookDevHDRIView.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/LookDevHDRIView.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LookDevHDRIView.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LookDevHDRIView.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LookDevHDRIView.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LookDevHDRIView.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LookDevHDRIView.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LookDevHDRIView.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LookDevHDRIView.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LookDevHDRIView.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LookDevHDRIView.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LookDevHDRIView.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LookDevHDRIView.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LookDevHDRIView.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LookDevHDRIView.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LookDevHDRIView.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LookDevHDRIView.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LookDevHDRIView.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LookDevHDRIView.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LookDevHDRIView.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/LookDevHDRIView.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LookDevHDRIView.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LookDevHDRIView.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LookDevHDRIView.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/LookDevHDRIView.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/LookDevHDRIView.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/LookDevHDRIView.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/LookDevHDRIView.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LookDevHDRIView.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LookDevHDRIView.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LookDevHDRIView.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LookDevHDRIView.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LookDevHDRIView.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LookDevHDRIView.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LookDevHDRIView.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LookDevHDRIView.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LookDevHDRIView.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LookDevHDRIView.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LookDevHDRIView.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LookDevHDRIView.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LookDevHDRIView.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LookDevHDRIView.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LookDevHDRIView.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LookDevHDRIView.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LookDevHDRIView.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="Experimental.html">实验性</a></li>
+<li><a href="LookDev.html">Look Dev</a></li>
+<li><a href="LookDevHDRIEnvironments.html">Look Dev 中的 HDRI 环境</a></li>
+<li>HDRI 视图</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LookDevHDRIEnvironments.html"></a></span><div class="tip">Look Dev 中的 HDRI 环境</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LookDevHDRIMenu.html"></a></span><div class="tip">HDRI 菜单</div>
+</div>
+</div></div>
+<h1>HDRI 视图</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Look Dev 中的光照由 HDRI（高动态范围图像）表示。Look Dev视图允许您在HDRI之间进行操作和轻松切换。</p>
+
+<p>在 HDRI 视图中可以查看和浏览 HDRI 库 (HDRI Library) 中的所有 HDRI。默认情况下，HDRI 库保存在 Editor 中。也可使用其他名称将 HDRI 库另存为资源。在 Look Dev 中，选择 <strong>Settings</strong> &gt; <strong>HDRI Library</strong> &gt; <strong>Save As New Library</strong>。</p>
+
+<p>要将 HDRI 导入 Unity，请将 .hdr 或 .exr 文件加载到 Unity 项目中，就像加载任何其他图像一样。在 <a href="class-TextureImporter.html">Texture Importer</a> Inspector 窗口中，将 <strong>Texture Type</strong> 设置为 <strong>Default__，将 </strong>Texture Shape__ 设置为 <strong>Cube__，并将 </strong>Convolution Type__ 设置为 <strong>Specular (Glossy Reflection)</strong>。</p>
+
+<p>要浏览 HDRI 库，请选择 Look Dev 视图右上角的 <strong>HDRI View</strong> 按钮。随后将打开 HDRI 视图，其中显示 HDRI 库中的所有内容，如下图所示。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevHDRIView-0.png" alt="选择 HDRI View 按钮可查看 HDRI 库">
+<figcaption>选择 <strong>HDRI View</strong> 按钮可查看 HDRI 库</figcaption>
+</figure>
+
+<p>需要测试 HDRI 纹理资源或天空盒立方体贴图材质时，请将其拖放到 Look Dev 视图或 HDRI 视图中以便使用。添加到 Look Dev 视图或 HDRI 视图的所有 HDRI 都会自动保存到 HDRI 库中。当您执行此操作时，视图周围会出现蓝色或橙色矩形，以指示在放下它时将哪个视图面板指定给它。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevHDRIView-Dragging-1.png" alt="通过拖放操作在 Look Dev 视图或 HDRI 视图中进行测试">
+<figcaption>通过拖放操作在 Look Dev 视图或 HDRI 视图中进行测试</figcaption>
+</figure>
+
+<p>图像说明：</p>
+
+<p>1.拖放到橙色视图</p>
+
+<p>2.拖放到蓝色视图</p>
+
+<p>3.拖放到 HDRI 视图。要一次拖放多个 HDRI，请在按住 <strong>Shift</strong> 的同时选择它们。</p>
+
+<p>直接从 HDRI 视图中拖放 HDRI，将它们移动到 Look Dev 视图中。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevHDRIView-DrangAndDrop-2.png" alt="从 HDRI 视图拖放到 Look Dev 视图">
+<figcaption>从 HDRI 视图拖放到 Look Dev 视图</figcaption>
+</figure>
+
+<p>使用 <a href="LookDevControlPanel.html">Control Panel</a> 中的 <strong>Environment</strong> 滑动条可在 HDRI 列表中前后移动。滑动条旁边显示的数字表示当前显示的 HDRI（从 0 开始）。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevHDRIView-EnvironmentSlider-3.png" alt=" 使用 Environment 滑动条滚动 HDRI 列表">
+<figcaption> 使用 <strong>Environment</strong> 滑动条滚动 HDRI 列表</figcaption>
+</figure>
+
+<p>要从 HDRI 库中删除 HDRI，请单击右上角 HDRI 名称旁边的 <strong>X</strong>。注意，不能删除 <strong>DefaultHDRI</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevHDRIView-RemoveHDRI-4.png" alt="单击 X 可从 HDRI 库中删除 HDRI">
+<figcaption>单击 <strong>X</strong> 可从 HDRI 库中删除 HDRI</figcaption>
+</figure>
+
+<p>要重新组织 HDRI 视图，请在浏览器中直接拖放 HDRI。</p>
+
+<figure>
+<img src="../uploads/Main/LookDevHDRIView-ReorganiseHDRI-5.jpg" alt="通过拖放操作重新组织 HDRI 视图">
+<figcaption>通过拖放操作重新组织 HDRI 视图</figcaption>
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LookDevHDRIEnvironments.html"></a></span><div class="tip">Look Dev 中的 HDRI 环境</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LookDevHDRIMenu.html"></a></span><div class="tip">HDRI 菜单</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 2018.1 - Unity 手册">
+<title>升级到 Unity 2018.1 - Unity 手册</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="description" content="本页面列出了从早期版本的 Unity 升级到 2018.1 版时可能对现有项目造成影响的更改">
+<meta property="og:description" content="本页面列出了从早期版本的 Unity 升级到 2018.1 版时可能对现有项目造成影响的更改">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UpgradeGuide20181';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/UpgradeGuide20181.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/UpgradeGuide20181.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/UpgradeGuide20181.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/UpgradeGuide20181.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/UpgradeGuide20181.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/UpgradeGuide20181.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/UpgradeGuide20181.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/UpgradeGuide20181.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/UpgradeGuide20181.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/UpgradeGuide20181.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/UpgradeGuide20181.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UpgradeGuide20181.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UpgradeGuide20181.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UpgradeGuide20181.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UpgradeGuide20181.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UpgradeGuide20181.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UpgradeGuide20181.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UpgradeGuide20181.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UpgradeGuide20181.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UpgradeGuide20181.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UpgradeGuide20181.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UpgradeGuide20181.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UpgradeGuide20181.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UpgradeGuide20181.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UpgradeGuide20181.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UpgradeGuide20181.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UpgradeGuide20181.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UpgradeGuide20181.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UpgradeGuide20181.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/UpgradeGuide20181.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UpgradeGuide20181.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UpgradeGuide20181.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UpgradeGuide20181.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/UpgradeGuide20181.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/UpgradeGuide20181.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/UpgradeGuide20181.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/UpgradeGuide20181.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UpgradeGuide20181.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UpgradeGuide20181.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UpgradeGuide20181.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UpgradeGuide20181.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UpgradeGuide20181.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UpgradeGuide20181.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UpgradeGuide20181.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UpgradeGuide20181.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UpgradeGuide20181.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UpgradeGuide20181.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UpgradeGuide20181.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UpgradeGuide20181.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UpgradeGuide20181.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UpgradeGuide20181.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UpgradeGuide20181.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UpgradeGuide20181.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UpgradeGuide20181.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 2018.1</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20182.html"></a></span><div class="tip">升级到 Unity 2018.2</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20173.html"></a></span><div class="tip">升级到 Unity 2017.3</div>
+</div>
+</div></div>
+<h1>升级到 Unity 2018.1</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面列出了从早期版本的 Unity 升级到 2018.1 版时可能对现有项目造成影响的更改</p>
+
+<hr>
+
+<h3>在禁用或销毁游戏对象时，从 MonoBehaviour 返回的协程将不再启动。</h3>
+
+<p>在以前的版本中，禁用或销毁游戏对象后，将停止其子 MonoBehaviours 上所有正在运行的协程。但是，在某些情况下，从此期间内调用的方法（例如，<code>OnBecameInvisible()</code>）进行启动的协程在以前是允许启动的。这种情况导致了与组件顺序相关的行为，在某些情况下会导致崩溃。</p>
+
+<p>在 Unity 2018.1 版中，在禁用或销毁游戏对象期间返回的协程将不再启动。</p>
+
+<hr>
+
+<h3>BuildPipeline API 现在返回 BuildReport 对象，而不是字符串</h3>
+
+<p>BuildPipeline API（例如 <code>BuildPipeline.BuildPlayer</code> 和 <code>BuildPipeline.BuildAssetBundles</code>）以前返回字符串。如果构建成功，返回结果为空；如果构建失败，则包含错误消息。</p>
+
+<p>在 2018.1 版中，这种返回结果已被新的 BuildReport 对象（其中包含关于构建过程的更丰富信息）所取代。</p>
+
+<p>要检查构建是否成功，请检索报告对象的 <code>summary</code> 属性，并检查其 <em>result</em> 属性：如果构建成功，该属性将为 <code>BuildResult.Succeeded</code>。例如：</p>
+
+<pre><code>var report = BuildPipeline.BuildPlayer(...);
+
+if (report.summary.result != BuildResult.Succeeded)
+{
+    throw new Exception("Build failed");
+}
+</code></pre>
+
+<hr>
+
+<h3>播放器退出通知已从消息更改为事件</h3>
+
+<p>以前，为了在 Unity 独立平台播放器退出时收到通知，需要在 MonoBehaviour 上实现 <code>OnApplicationQuit</code> 方法，而为了使播放器中止退出，需要调用 <code>Application.CancelQuit</code>。</p>
+
+<p>现在引入了两个新事件。这两个事件是 <code>Application.wantsToQuit</code> 和 <code>Application.quitting</code>。通过监听这些事件，即可在 Unity 独立平台播放器退出时获得通知。播放器意图退出时调用 <code>Application.wantsToQuit</code>。<code>wantsToQuit</code> 的监听器必须返回 true 或 false。如果希望播放器继续退出，则返回 true；如果希望播放器中止退出，则返回 false。播放器已确定退出而无法中止时调用 <code>Application.quitting</code> 事件。</p>
+
+<p>已弃用 <code>Application.CancelQuit</code>，请改用 <code>Application.wantsToQuit</code>。</p>
+
+<pre><code>using UnityEngine;
+
+public class PlayerQuitExample
+
+{
+
+    static bool WantsToQuit()
+
+    {
+
+        // 是否希望 Editor 退出？
+
+        return true;
+
+    }
+
+    static void Quit()
+
+    {
+
+        Debug.Log("Quitting the Player");
+
+    }
+
+    [RuntimeInitializeOnLoadMethod]
+
+    static void RunOnStart()
+
+    {
+
+        Application.wantsToQuit += WantsToQuit;
+
+        Application.quit += Quit;
+
+    }
+
+}
+</code></pre>
+
+<hr>
+
+<h3>在 .Net 平台上已弃用 AvatarBuilder.BuildHumanAvatar</h3>
+
+<p>此变化影响以下运行时平台：WSAPlayerX86、WSAPlayerX64 和 WSAPlayerARM。</p>
+
+<p>目前没有替代项。</p>
+
+<hr>
+
+<h3>已弃用 TouchScreenKeyboard.wasCanceled 和 TouchScreenKeyboard.done</h3>
+
+<p>可查询一个新的 TouchScreenKeyboard.status 来涵盖已弃用状态和更多其他状态。</p>
+
+<hr>
+
+<h3>已从 Unity 安装程序中移除 MonoDevelop 5.9.6，并且在 Unity 中已不再提供其支持。</h3>
+
+<p>在 macOS 上，已将 MonoDevelop 5.9.6 替换为 Visual Studio for Mac（作为 macOS 安装程序中的捆绑 C# 脚本编辑器）。在 Windows 上，Visual Studio 2017 Community 现在是与 Unity 一起安装的唯一 C# 脚本编辑器。</p>
+
+<p>安装在 Unity 可执行文件旁边的默认位置时，Unity 在偏好设置中不再将 MonoDevelop 视为“MonoDevelop (built-in)”外部脚本编辑器。未安装且在偏好设置中未选择 C# 代码编辑器时，Unity 使用系统默认应用程序来打开 C# (.cs) 脚本。</p>
+
+<hr>
+
+<h3>BuildPipeline 回调接口现在接受 BuildReport 对象</h3>
+
+<p>BuildPipeline 回调接口 <code>IPreprocessBuild</code>、<code>IPostprocessBuild</code> 和 <code>IProcessScene</code> 已更改，现在要求传入 <code>BuildReport</code> 对象。这取代了以前的构建路径/目标平台参数；如果要实现这些接口，需要更改代码。</p>
+
+<p>构建路径和目标平台都是可以通过 <code>BuildReport</code> 对象进行访问的。构建路径现在是 <code>report.summary.outputPath</code>，而目标平台是 <code>report.summary.platform</code>。</p>
+
+<hr>
+
+<h3>以后不再通过专用导入器来导入位于插件文件夹中的资源</h3>
+
+<p>以前使用专用导入器来导入位于插件文件夹中的资源（例如，目录中扩展名为 .bundle、.plugin 或 .folder 的资源）。比如，通过纹理导入器导入纹理，通过音频导入器导入 AudioClips 等等。现在使用默认导入器来导入所有这些资源，这意味着您将不能像以前那样引用这些资源，因为它们不再具有专门的类型（纹理、AudioClip 等）。插件文件夹包含在资源包中，因此除非使用插件访问方法，否则无法从外部访问其中的资源。</p>
+
+<p>要继续使用这些资源，必须将它们移出插件文件夹。</p>
+
+<hr>
+
+<h3>粒子系统网格粒子错误地应用了轴心偏移值</h3>
+
+<p>用于将轴心偏移应用于网格的数学公式以前不正确，与用于公告牌粒子的方式不一致。为了实现正确缩放，轴心偏移应该乘以粒子大小，因此轴心偏移 1 等于粒子的一个完整宽度。</p>
+
+<p>对于网格，该大小以前被平方，这意味着轴心大小基于平方后的粒子大小。因此，在包含各种大小的粒子的系统中，无法获得一致结果。</p>
+
+<p>对于使用相同大小的粒子的系统，可以对公式进行逆向工程来确定需要将轴心偏移值调整多少才能补偿此行为变化：</p>
+
+<p>旧公式：__offset = size * size * pivot__</p>
+
+<p>新公式：__offset = size * pivot__</p>
+
+<p>因此，如果所有粒子的大小相同：</p>
+
+<p><strong>newOffset = pivot / size</strong></p>
+
+<p>在粒子大小不同的系统中，需要对相关系统进行可视化重估。</p>
+
+<hr>
+
+<h3>GPU 实例化支持全局光照</h3>
+
+<p>从 2018.1 版开始，Unity 中的 GPU 实例化渲染支持全局光照 (GI)。每个 GPU 实例可支持来自不同<a href="https://docs.unity3d.com/Manual/LightProbes.html">光照探针</a>、一个<a href="https://docs.unity3d.com/Manual/Lightmapping.html">光照贴图</a>（但为图集的不同区域）或一个<a href="https://docs.unity3d.com/Manual/class-LightProbeProxyVolume.html">光照探针代理体</a>组件（为包含所有实例的空间体积进行烘焙）的 GI。标准着色器和表面着色器自动随附这些更改，但是您需要更新自定义着色器代码才能启用这些功能。</p>
+
+<hr>
+
+<h3>手柄绘制和大小函数默认值</h3>
+
+<p>UnityEditor.IMGUI.Controls 命名空间中的复杂手柄（例如 BoxBoundsHandle、CapsuleBoundsHandle、SphereBoundsHandle、ArcHandle 和 JointAngularLimitHandle）具有可以分配值的委托，从而改变其控制点的外观。以前，将 null 值分配给这些委托将回退到默认行为。现在，为它们分配 null 值不会导致任何行为，因此更容易禁用特定控制手柄。如果需要将控制手柄重置为其默认行为，现在每个类分别有默认方法的公共 API 点。</p>
+
+<hr>
+
+<h3>在 Unity Editor 中编译不安全的 C# 代码现在需要启用一个选项。</h3>
+
+<p>现在，编译“不安全”的 C# 代码需要在预定义程序集（例如 Assembly-CSharp.dll）的 Player Settings 中以及程序集定义文件程序集的 Inspector 中启用 <strong>Allow ‘unsafe’ code</strong> 选项。启用此选项会让 Unity 在编译脚本时将 /unsafe 选项传递给 C# 编译器。</p>
+
+<hr>
+
+<h3>“UnityPackageManager”目录重命名为“Packages”</h3>
+
+<p>在 2017.2 和 2017.3 版中，Unity Package Manager 引入了 <strong>UnityPackageManager</strong> 目录，用于存储名为 <strong>manifest.json</strong> 的文件。可通过脚本使用以 <strong>Packages</strong> 开头的虚拟相对路径来访问包内容。</p>
+
+<p>在 2018.1 版中，__UnityPackageManager__ 目录已重命名为 <strong>Packages__，使之与打包资源的虚拟相对路径一致。应该将 </strong>manifest.json__ 文件自动移到新目录。</p>
+
+<p>因此：</p>
+
+<ul>
+<li><p>如果项目使用 Perforce 或 Git 之类的版本控制系统 (VCS)，可能需要更新其配置来跟踪 <strong>Packages</strong> 目录，而不是 <strong>UnityPackageManager</strong> 目录。</p></li>
+<li>
+<p>如果项目因使用 Nuget（或任何外部包管理器）而需要使用 <strong>Packages</strong> 目录，则应该更改其配置以使用其他目录。之所以建议执行此操作，是为了消除 Unity Package Manager 在很小的概率下获取包而可能导致编译错误或导入错误等难以调试的问题。</p>
+
+<ul>
+<li>要配置 Nuget 以使用其他目录来存储其包，请参阅 <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior">Microsoft 官方文档</a>。</li>
+</ul>
+</li>
+<li><p>在迁移到新目录后，可以安全删除 <strong>UnityPackageManager</strong> 目录。</p></li>
+</ul>
+
+<p><br><br> 有关 2018.1 版新增功能的详细信息以及更详细的升级说明，请参阅 <a href="https://unity3d.com/unity/whats-new/unity-2018.1.0">2018.1 发行说明</a></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20182.html"></a></span><div class="tip">升级到 Unity 2018.2</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20173.html"></a></span><div class="tip">升级到 Unity 2017.3</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
